@@ -65,7 +65,9 @@ This file should have one gene ID per line and the order of ID should be the sam
 head -3 fe/Blood.cfe.txt
 
 0032-blood 0032-blood Bos_taurus 1 0
+
 0288-blood 0288-blood Bos_taurus 1 0
+
 0299-blood 0299-blood Bos_taurus 1 0
 
 This file has no header. Following the style of expression profiles, the first column is family ID and the 2nd column is the individual ID and from the 3rd column onwards are the fixed effects, e.g., breed types, locations and etc.
