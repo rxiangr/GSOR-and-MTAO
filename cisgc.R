@@ -39,7 +39,8 @@ PATH_plink <- opt$plinkpath
 memmb <- opt$memmb
 
 #---read some files
-geneannodt <- fread(geneannofn)
+#geneannodt <- fread(geneannofn)
+geneannodt <- unique(fread(geneannofn)) ##prevent duplicates in annotation file
 colnames(geneannodt)[1:6] <- c('geneid','gene.name','chromosome','genest','geneend','strand')
 bimdt <- fread(paste0(targplkpath,'/',targplkpref,'.bim'))
 #--subset annotation using bimfile
