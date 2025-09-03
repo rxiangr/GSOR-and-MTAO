@@ -191,7 +191,9 @@ This is an example of the genetic score for one gene (ENSBTAG00000000225) which 
 
 **--minNsnp** specifies the minimal number of SNPs used for the prediction of genetic score. If fewer than 2 or a specified value, the genetic score will not be predicted.
 
-**--genetype** specifies if gene or intron is being analysed. The default is 1. If a gene is analysed then the input for “--genedis” will be based on the starting (TSS) of the gene, whereas if an intron is analysed, “--genedis” will be based the intron as the center.
+**--genetype** specifies if gene or intron is being analysed. The default is 1. If a gene is analysed then the input for “--genedis” will be based on the starting (TSS) of the gene, whereas if an intron, exon or genomeic segments is analysed, “--genedis” will be based the intron/exon/segments' coordinates.
+ 
+**Note**: you can use cisgc.R to calculate local GEBV where using genomic segments; when you do that use "--genetype 2: and "--genedis 0".
 
 **--plinkpath** specifies the full path to plink software
 #try plink/plink to check it.
