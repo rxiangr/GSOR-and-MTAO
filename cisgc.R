@@ -72,7 +72,7 @@ if(nrow(bimdt_sub)>=minNsnp){
 write.table(bimdt_sub$V2,paste0(snplistoutpath,'/',gene,'.snplist'),quote=F,col.names=F,row.names=F)
 }
 #--create plink argument
-arg <- paste0(PATH_plink," --memory ",memmb," --keep-allele-order --cow --bfile ",targplkpath,"/",targplkpref, " --extract ",snplistoutpath,"/",gene,".snplist"," --score <(zcat ",snpvfn,")", " 1 2 3 --out ",gene)
+arg <- paste0(PATH_plink," --memory ",memmb," --keep-allele-order --cow --bfile ",targplkpath,"/",targplkpref, " --extract ",snplistoutpath,"/",gene,".snplist"," --score <(zcat ",snpvfn,")", " 1 2 3 --sum --out ",gene)
 #--process argument to protect '()'
 arg1 <- paste0('echo ','\"',arg,'\"','|bash')
 #--excute argement
